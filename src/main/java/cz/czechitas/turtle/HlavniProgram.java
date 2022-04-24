@@ -2,11 +2,13 @@ package cz.czechitas.turtle;
 
 import cz.czechitas.turtle.engine.*;
 
+import java.awt.*;
+
 public class HlavniProgram {
     Turtle zofka = new Turtle();
 
     public void main(String[] args) {
-        zofka.setLocation(100.0, 100.0);
+       /* zofka.setLocation(100.0, 100.0);
         nakresliRovnostrannyTrojuhelnik(50.0);
         zofka.setLocation(200, 100);
         nakresliCtverec(50);
@@ -14,6 +16,54 @@ public class HlavniProgram {
         nakresliObdelnik(40, 70);
         zofka.setLocation(340, 100);
         nakresliKolecko(5);
+    */
+
+        zofka.setLocation(100, 110);
+        zofka.setPenColor(Color.red);
+        nakresliKolecko(10);
+        zofka.setLocation(228, 120);
+        zofka.turnLeft(90);
+        zofka.setPenColor(Color.yellow);
+        nakresliRovnostrannyTrojuhelnik(130);
+
+        zofka.setPenColor(Color.cyan);
+        zofka.turnRight(90);
+        zofka.setLocation(390, 100);
+        nakresliKolecko(5);
+        zofka.setLocation(380, 180);
+        nakresliKolecko(7);
+        zofka.setLocation(370, 285);
+        nakresliKolecko(9);
+        zofka.setLocation(350, 180);
+        nakresliKolecko(2);
+        zofka.setLocation(475, 180);
+        nakresliKolecko(2);
+
+        zofka.setPenWidth(5);
+        zofka.setLocation(607, 200);
+        zofka.setPenColor(new Color(141,74,67));
+        nakresliRovnostrannyTrojuhelnik(60);
+        zofka.setLocation(607,180);
+        zofka.setPenColor(Color.black);
+        nakresliObdelnik(60,100);
+        zofka.setLocation(610, 203);
+        zofka.setPenColor(Color.black);
+        nakresliKolecko(3);
+        zofka.setLocation(660,203);
+        nakresliKolecko(3);
+        zofka.setLocation(710,180);
+        zofka.setPenColor(Color.black);
+        nakresliObdelnik(130, 90);
+        zofka.setLocation(712,180);
+        zofka.setPenColor(Color.black);
+        nakresliKolecko(7);
+        zofka.penUp();
+        zofka.turnRight(90);
+        zofka.move(200);
+
+
+
+
     }
 
 
@@ -35,9 +85,9 @@ public class HlavniProgram {
     public void nakresliObdelnik(double velikostStranyX, double velikostStranyY ) {
         for (int i = 0; i <2; i++) {
             zofka.move(velikostStranyX);
-            zofka.turnLeft(90);
+            zofka.turnRight(90);
             zofka.move(velikostStranyY);
-            zofka.turnLeft(90);
+            zofka.turnRight(90);
         }
     }
     public void nakresliKolecko(double delkaStrany) {
